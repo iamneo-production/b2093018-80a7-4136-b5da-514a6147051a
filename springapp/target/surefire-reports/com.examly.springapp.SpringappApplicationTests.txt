@@ -1,0 +1,24 @@
+-------------------------------------------------------------------------------
+Test set: com.examly.springapp.SpringappApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 9.63 s <<< FAILURE! - in com.examly.springapp.SpringappApplicationTests
+test_case3  Time elapsed: 0.03 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer
+	at com.examly.springapp.SpringappApplicationTests.test_case3(SpringappApplicationTests.java:52)
+Caused by: org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer
+	at com.examly.springapp.SpringappApplicationTests.test_case3(SpringappApplicationTests.java:52)
+Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer
+	at com.examly.springapp.SpringappApplicationTests.test_case3(SpringappApplicationTests.java:52)
+Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer
+	at com.examly.springapp.SpringappApplicationTests.test_case3(SpringappApplicationTests.java:52)
+
+test_case4  Time elapsed: 0.012 s  <<< ERROR!
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer
+	at com.examly.springapp.SpringappApplicationTests.test_case4(SpringappApplicationTests.java:62)
+Caused by: org.springframework.dao.InvalidDataAccessApiUsageException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer; nested exception is java.lang.IllegalArgumentException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer
+	at com.examly.springapp.SpringappApplicationTests.test_case4(SpringappApplicationTests.java:62)
+Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer
+	at com.examly.springapp.SpringappApplicationTests.test_case4(SpringappApplicationTests.java:62)
+Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class com.examly.springapp.UserModel.UserModel. Expected: class java.lang.String, got class java.lang.Integer
+	at com.examly.springapp.SpringappApplicationTests.test_case4(SpringappApplicationTests.java:62)
+
