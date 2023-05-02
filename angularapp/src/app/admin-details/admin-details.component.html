@@ -1,0 +1,60 @@
+<!-- navBar  -->
+<h1>Hello Admin </h1>
+
+
+
+<div class="topnav">
+
+<a class="active" href="#home" routerLink="/add-policy">Add Policy</a>
+
+<!-- <a href="#about" >  Profile Details</a> -->
+
+<a href="#contact" routerLink="/admin-details">Applicant Details</a>
+<a href="#contact" routerLink="/updatepolicy">Update Policy</a>
+
+<a href="#history" style="float: right">Logout</a></div>
+
+<!-- its end  -->
+
+
+<br>
+<br>
+<h2 class="text-center">Policy Data</h2>
+
+<br>
+
+<table class="table">
+    <thead class="table-dark">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Applicable</th>
+        <th>Claimant</th>
+        <th>Years</th>
+        <th>Rate</th>
+        <th>Details</th>
+        <th>Terms</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let u of policy1">
+        <td>{{u.policyid}}</td>
+        <td>{{u.policyname}}</td>
+        <td>{{u.applicableage}}</td>
+        <td>{{u.claimamt}}</td>
+        <td>{{u.yearsPlan}}</td>
+        <td>{{u.rateofinterest}}</td>
+        <td>{{u.policydetails}}</td>
+        <td>{{u.termsandcondition}}</td>
+       <td> <button (click)=delete1(u.policyid) class="fa fa-trash"  style="font-size:20px;color:red;">
+            delete
+                     </button></td>
+
+                     <td><button (click)=edit1()  routerLink="/updatepolicy" class="fa fa-trash"  style="font-size:20px;color:blue;">
+                        edit
+                                 </button></td>
+            
+        </tr>
+    </tbody>
+    
+</table>

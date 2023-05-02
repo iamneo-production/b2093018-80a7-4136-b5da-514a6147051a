@@ -1,0 +1,121 @@
+<!-- <p>my-policy works!</p> -->
+<h1 class="text-center">Life Insuarance Portal</h1>
+
+<div class="topnav">
+
+    <a class="active" href="#home" routerLink="/view-policy">View Policy</a>
+    
+    <a href="#about" routerLink="/my-profile">My Profile</a>
+    
+    <a href="#contact" routerLink="/my-policy">My Policy</a>
+    
+    <a href="#history">Logout</a></div>
+
+    <br>
+    
+
+<h2 class="text-center">Your Policy</h2>
+<br>
+
+    <table  class="table">
+   <thead class="table-dark">
+    <tr>
+   
+    <th>policyId</th>
+   
+   <th>policytype</th>
+   
+    <th>PolicyName</th>
+    <th>applicantAddress</th>
+   
+   <th>applicantMobile</th>
+   
+    <th>applicantEmail</th>
+    <th>applicantAadhaar</th>
+   
+   <th>applicantPan</th>
+   
+    <th>applicantSalary</th>
+   
+   </tr>
+   </thead>
+   <tbody>
+   
+   <tr *ngFor="let pr of profile">
+   
+    <td>{{pr.policyId}}</td>
+   
+   <td>{{pr.policytype}}</td>
+   
+   <td>{{pr.policyName}}</td>
+   <td>{{pr.applicantAddress}}</td>
+   <td>{{pr.applicantMobile}}</td>
+   <td>{{pr.applicantEmail}}</td>
+   <td>{{pr.applicantAadhaar}}</td>
+   <td>{{pr.applicantPan}}</td>
+   <td>{{pr.applicantSalary}}</td>
+   
+   </tr>
+   </tbody>
+   
+   </table>
+   
+    
+   <div class="text-center">Want to <a routerLink="/view-policy">Go Back</a></div>
+
+<p></p>
+
+
+<!-- footer -->
+
+<footer class="bg-dark text-center text-white">
+    <div class="">
+        <h5 class="text-uppercase">Life Insurance Portal</h5>
+
+        <p>
+
+        Buying life insurance protects your spouse and children from the potentially devastating financial losses that could result if something happened to you.
+        It provides financial security, helps to pay off debts, helps to pay living expenses, and helps to pay any medical or final expenses.
+
+        </p>
+      </div>
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          > <fa-icon [icon]="faFacebook"></fa-icon></a>
+  
+        <!-- Twitter -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          > <fa-icon [icon]="faTwitter"></fa-icon></a>
+  
+        <!-- Google -->
+        <!-- <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fab fa-google"></i
+        ></a> -->
+  
+        <!-- Instagram -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          > <fa-icon [icon]="faInstagram"></fa-icon></a>
+  
+        <!-- Linkedin -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><fa-icon [icon]="faLinkedin"></fa-icon></a>
+  
+        <!-- Github -->
+        <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><fa-icon [icon]="faGithub"></fa-icon></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+    Life Insuarance Portal
+    </div>
+    <!-- Copyright -->
+  </footer>

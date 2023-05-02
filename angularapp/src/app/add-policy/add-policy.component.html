@@ -1,0 +1,153 @@
+<div class="signup-form">
+    <form [formGroup]="policyForm" (ngSubmit)="onSubmit()">
+    <h2>Add Policy</h2>
+    <div class="form-group">
+    <label for="policyid"><b> </b></label><br>
+    <input type="text" formControlName="policyid" id="policyid" class="form-control" placeholder="Enter policyid"
+    [ngClass]="{
+        error: getControl('policyid')?.errors && getControl('policyid')?.touched
+      }"
+    />
+  </div>
+  <div *ngIf="getControl('policyid')?.errors && getControl('policyid')?.touched">
+    <small
+      class="text-danger"
+      *ngIf="getControl('policyid')?.errors?.['required']"
+    >
+      Policy Id  is required
+    </small>
+  </div>
+<!-- end of policyId  -->
+     <div class="form-group">
+    <label for="policyname"><b> </b></label><br>
+    <input type="text" formControlName="policyname" id="policyname" class="form-control" placeholder="Enter Policy Name"
+    [ngClass]="{
+        error: getControl('policyname')?.errors && getControl('policyname')?.touched
+      }" />
+     </div>
+     <div *ngIf="getControl('policyname')?.errors && getControl('policyname')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('policyname')?.errors?.['required']"
+        >
+          Policy Name  is required
+        </small>
+      </div>
+
+      <!-- end of policy name -->
+
+
+     <div class="form-group">
+    <label for="applicableage"><b> </b></label><br>
+    <input type="text" formControlName="applicableage" id="applicableage" class="form-control" placeholder="Enter Appicable Age"
+    
+    [ngClass]="{
+        error: getControl('applicableage')?.errors && getControl('applicableage')?.touched
+      }"/>
+    </div>
+    <div *ngIf="getControl('applicableage')?.errors && getControl('applicableage')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('applicableage')?.errors?.['required']"
+        >
+        Applicable Age  is required
+        </small>
+      </div>
+      <!-- end of applicable age -->
+
+
+
+    <div class="form-group">
+    <label for="claimamt"><b> </b></label><br>
+     <input type="text" formControlName="claimamt" id="claimamt" class="form-control" placeholder="Enter claimamt"
+     
+     [ngClass]="{
+        error: getControl('claimamt')?.errors && getControl('claimamt')?.touched
+      }">
+    </div>
+    <div *ngIf="getControl('claimamt')?.errors && getControl('claimamt')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('claimamt')?.errors?.['required']"
+        >
+        claimamt  is required
+        </small>
+      </div>
+
+<!-- end of claaim amou -->
+    <div class="form-group">
+    <label for="yearsPlan"><b> </b></label><br>
+    <input type="text" formControlName="yearsPlan" id="yearsPlan" class="form-control"placeholder="Enter yearsPlan"
+    [ngClass]="{
+        error: getControl('yearsPlan')?.errors && getControl('yearsPlan')?.touched
+      }">
+    </div>
+    <div *ngIf="getControl('yearsPlan')?.errors && getControl('yearsPlan')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('yearsPlan')?.errors?.['required']"
+        >
+        claimamt  is required
+        </small>
+      </div>
+      <!-- end of claim -->
+
+     <div class="form-group">
+    <label for="rateofinterest "><b> </b></label><br>
+    <input type="text" formControlName="rateofinterest" id="rateofinterest " class="form-control"placeholder="Enter your interestrate"
+    [ngClass]="{
+        error: getControl('rateofinterest')?.errors && getControl('rateofinterest')?.touched
+      }">
+    </div>
+    <div *ngIf="getControl('rateofinterest')?.errors && getControl('rateofinterest')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('rateofinterest')?.errors?.['required']"
+        >
+        claimamt  is required
+        </small>
+      </div>
+      <!-- end  -->
+    <div class="form-group">
+    <label for="policydetails "><b> </b></label><br>
+    <input type="text" formControlName="policydetails" id="policydetails " class="form-control"placeholder="Enter your policydetails"
+    [ngClass]="{
+        error: getControl('policydetails')?.errors && getControl('policydetails')?.touched
+      }">
+    </div>
+    <div *ngIf="getControl('policydetails')?.errors && getControl('policydetails')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('policydetails')?.errors?.['required']"
+        >
+        policy details is required
+        </small>
+      </div>
+      <!-- end of policy -->
+    <div class="form-group">
+    <label for="termsandcondition "><b> </b></label><br>
+    <input type="text" formControlName="termsandcondition" id="termsandcondition " class="form-control"placeholder="Enter your termsandcondition"
+    [ngClass]="{
+        error: getControl('termsandcondition')?.errors && getControl('termsandcondition')?.touched
+      }">
+    </div>
+    <div *ngIf="getControl('termsandcondition')?.errors && getControl('termsandcondition')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('termsandcondition')?.errors?.['required']"
+        >
+        policy details is required
+        </small>
+      </div>
+      <!-- end finally -->
+
+    <br>
+    <div class=" Add">
+    <div class="form-group">
+     <button type="submit">ADD</button><button routerLink="/admin-details">View</button>
+     <router-outlet></router-outlet>
+     </div>
+    </div>
+    
+     </form>
+    </div>

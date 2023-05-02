@@ -1,0 +1,51 @@
+<div class="container">
+    <h2 class="text-center">Update Policy</h2>
+    <div class="row">
+     <div class="col-md-4"></div>
+    <div class="col-md-4">
+    <form [formGroup]="policyForm" (ngSubmit)="edit()">
+    <div>
+    <div class="form-group">
+    <label for="policyid"><b> </b></label><br>
+    <input type="text" formControlName="policyid" id="policyid" class="form-control" placeholder="Enter policyid">
+    </div>
+     <div class="form-group">
+    <label for="policyname"><b> </b></label><br>
+    <input type="text" formControlName="policyname" id="policyname" class="form-control" placeholder="Enter Policy Name">
+     </div>
+     <div class="form-group">
+    <label for="applicableage"><b> </b></label><br>
+    <input type="text" formControlName="applicableage" id="applicableage" class="form-control" placeholder="Enter Appicable Age">
+    </div>
+    <div class="form-group">
+    <label for="claimamt"><b> </b></label><br>
+     <input type="text" formControlName="claimamt" id="claimamt" class="form-control" placeholder="Enter claimamt">
+    </div>
+    <div class="form-group">
+    <label for="yearsPlan"><b> </b></label><br>
+    <input type="text" formControlName="yearsPlan" id="yearsPlan" class="form-control"placeholder="Enter yearsPlan">
+    </div>
+     <div class="form-group">
+    <label for="rateofinterest "><b> </b></label><br>
+    <input type="text" formControlName="rateofinterest" id="rateofinterest " class="form-control"placeholder="Enter your interestrate">
+    </div>
+    <div class="form-group">
+    <label for="policydetails "><b> </b></label><br>
+    <input type="text" formControlName="policydetails" id="policydetails " class="form-control"placeholder="Enter your policydetails">
+    </div>
+    <div class="form-group">
+    <label for="termsandcondition "><b> </b></label><br>
+    <input type="text" formControlName="termsandcondition" id="termsandcondition " class="form-control"placeholder="Enter your termsandcondition">
+    </div>
+    <br>
+    <div class=" Add">
+    <div class="form-group">
+     <button type="submit">update</button>
+     <button type="submit" routerLink="/admin-details">View</button>
+     <router-outlet></router-outlet>
+     </div>
+    </div>
+    </div>
+     </form>
+     </div>
+    </div>
