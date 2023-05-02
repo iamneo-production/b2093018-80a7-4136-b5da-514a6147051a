@@ -1,0 +1,264 @@
+<img class="yo" style="width: 135%; height: 200%;" src="https://img.freepik.com/premium-photo/hand-sky-background-holds-family-iconhealthcare-life-insurance-conceptfather-mother-daughter-son_150455-20403.jpg?w=1380" alt="img vro">
+<div class="signup-form">
+    <form [formGroup]="loginForm" (ngSubmit)="UserInsurance()">
+      <h2>Apply Policy</h2>
+      <br>
+      <div class="form-group">
+        <input
+        class="form-control"
+          type="text"
+          name="policyId"
+          id="policyId"
+          placeholder="Enter Policy Id"
+          formControlName="policyId"
+          [ngClass]="{
+            error:
+              getControl('policyId')?.errors &&
+              getControl('policyId')?.touched
+          }"
+        />
+        </div>
+        <div *ngIf="getControl('policyId')?.errors && getControl('policyId')?.touched">
+          <small
+            class="text-danger"
+            *ngIf="getControl('policyId')?.errors?.['required']"
+          >
+          Policy Id is required
+          </small>
+          <small
+          class="text-danger"
+          *ngIf="getControl('policyId')?.errors?.['policyId'] || getControl('policyId')?.errors?.['minLength'] || getControl('policyId')?.errors?.['pattern']"
+        >
+          please enter a valid Policy Id
+        </small>
+        </div>
+        <!-- End of policyId -->
+        <br>
+        <div class="form-group">
+        <input
+        class="form-control"
+          type="text"
+          placeholder="Enter Policy Type"
+          formControlName="policytype"
+          name="policytype"
+          [ngClass]="{
+            error: getControl('policytype')?.errors && getControl('policytype')?.touched
+          }"
+        />
+        </div>
+        <div *ngIf="getControl('policytype')?.errors && getControl('policytype')?.touched">
+          <small
+            class="text-danger"
+            *ngIf="getControl('policytype')?.errors?.['required']"
+          >
+            Policy Type is required
+          </small>
+        </div>
+        <br />
+        <!-- end of PolicyType -->
+        
+        <div class="form-group">
+        <input
+        class="form-control"
+          type="text"
+          placeholder="Enter Applicant Name"
+          formControlName="applicantName"
+          name="applicantName"
+          [ngClass]="{
+            error: getControl('applicantName')?.errors && getControl('applicantName')?.touched
+          }"
+        />
+        </div>
+        <div *ngIf="getControl('applicantName')?.errors && getControl('applicantName')?.touched">
+          <small
+            class="text-danger"
+            *ngIf="getControl('applicantName')?.errors?.['required']"
+          >
+            Applicant Name is required
+          </small>
+        </div>
+        <br />
+        <!-- end of applicant Name -->
+        
+        <div class="form-group">
+        <input
+        class="form-control"
+          type="text"
+          placeholder="Enter Applicant Address"
+          formControlName="applicantAddress"
+          name="applicantAddress"
+          [ngClass]="{
+            error: getControl('applicantAddress')?.errors && getControl('applicantAddress')?.touched
+          }"
+        />
+        </div>
+        <div *ngIf="getControl('applicantAddress')?.errors && getControl('applicantAddress')?.touched">
+          <small
+            class="text-danger"
+            *ngIf="getControl('applicantAddress')?.errors?.['required']"
+          >
+            Applicant Address is required
+          </small>
+        </div>
+        <br />
+        <!-- end of applicant address -->
+             <!-- for mobile number  -->
+      <div class="form-group">
+        <input
+        class="form-control"
+          type="text"
+          name="applicantMobile"
+          id="applicantMobile"
+          placeholder="Enter Applicant Mobile"
+          formControlName="applicantMobile"
+          [ngClass]="{
+            error:
+              getControl('applicantMobile')?.errors &&
+              getControl('applicantMobile')?.touched
+          }"
+        />
+        </div>
+        <div *ngIf="getControl('applicantMobile')?.errors && getControl('applicantMobile')?.touched">
+          <small
+            class="text-danger"
+            *ngIf="getControl('applicantMobile')?.errors?.['required']"
+          >
+          applicant Mobile is required
+          </small>
+          <small
+          class="text-danger"
+          *ngIf="getControl('applicantMobile')?.errors?.['maxLength'] || getControl('applicantMobile')?.errors?.['minLength'] || getControl('applicantMobile')?.errors?.['pattern']"
+        >
+          please enter a valid applicant Mobile
+        </small>
+        </div>
+        <!-- ending applicant mobile number input -->
+        <br>
+      <div class="form-group">
+      <input
+      class="form-control"
+        type="email"
+        placeholder="Enter Applicant Email"
+        formControlName="applicantEmail"
+        name="applicantEmail"
+        [ngClass]="{
+          error: getControl('applicantEmail')?.errors && getControl('applicantEmail')?.touched
+        }"
+      />
+      </div>
+      <div class="mb-3" *ngIf="getControl('applicantEmail')?.errors && getControl('applicantEmail')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('applicantEmail')?.errors?.['required']"
+        >
+        applicant Email is required
+        </small>
+        <small
+        class="text-danger"
+        *ngIf="getControl('applicantEmail')?.errors?.['maxlength'] || getControl('applicantEmail')?.errors?.['minlength'] || getControl('mobileNumber')?.errors?.['pattern']"
+      >
+        please enter a applicantEmail
+      </small>
+      </div>
+    <!-- end of email -->
+    <br>
+    <div class="form-group">
+        <input
+        class="form-control"
+          type="text"
+          placeholder="Enter Applicant Aadhaar"
+          formControlName="applicantAadhaar"
+          name="applicantAadhaar"
+          [ngClass]="{
+            error: getControl('applicantAadhaar')?.errors && getControl('applicantAadhaar')?.touched
+          }"
+        />
+        </div>
+        <div *ngIf="getControl('applicantAadhaar')?.errors && getControl('applicantAadhaar')?.touched">
+          <small
+            class="text-danger"
+            *ngIf="getControl('applicantAadhaar')?.errors?.['required']"
+          >
+          applicant Aadhaar is required
+          </small>
+        </div>
+        
+        
+
+    <!-- end of adharcard  -->
+    <br />
+    
+      <div class="form-group">
+      <input
+      class="form-control"
+        type="text"
+        placeholder="Enter Applicant Pan Card"
+        formControlName="applicantPan"
+        name="applicantPan"
+        [ngClass]="{
+          error: getControl('applicantPan')?.errors && getControl('applicantPan')?.touched
+        }"
+      />
+      </div>
+      <div *ngIf="getControl('applicantPan')?.errors && getControl('applicantPan')?.touched">
+        <small
+          class="text-danger"
+          *ngIf="getControl('applicantPan')?.errors?.['required']"
+        >
+        applicant Pan is required
+        </small>
+      </div>
+      <br />
+    <!--end of  Pancard -->
+    <div class="form-group">
+        <input
+        class="form-control"
+          type="text"
+          name="applicantSalary"
+          id="applicantSalary"
+          placeholder="Enter Applicant Salary"
+          formControlName="applicantSalary"
+          [ngClass]="{
+            error:
+              getControl('applicantSalary')?.errors &&
+              getControl('applicantSalary')?.touched
+          }"
+        />
+        </div>
+        <div *ngIf="getControl('applicantSalary')?.errors && getControl('applicantSalary')?.touched">
+          <small
+            class="text-danger"
+            *ngIf="getControl('applicantSalary')?.errors?.['required']"
+          >
+          applicant Salary is required
+          </small>
+          <small
+          class="text-danger"
+          *ngIf="getControl('applicantSalary')?.errors?.['applicantSalary'] || getControl('applicantSalary')?.errors?.['minLength'] || getControl('applicantSalary')?.errors?.['pattern']"
+        >
+          please enter a applicant Salary
+        </small>
+        </div>
+        <!-- End of Salary -->
+ 
+      <!-- upload file -->
+      <p>Upload a Document</p>
+  <input type="file" (change)="onFileSelected($event)">
+  <input type="text" [(ngModel)]="documenttype">
+  <button (click)="uploadDocument()">Upload</button>
+  <p>{{ message }}</p>
+  `
+ <!-- end upload -->
+      <div class="text-center">
+      <button type="submit" class="btn btn-success btn-lg btn-block" routerLink="/my-policy" (click)="registerNow()">Submit</button>
+      </div>
+     <br>
+     
+    </form>
+    <div class="text-center">Want to <a routerLink="/view-policy">Go Back</a></div>
+    <!-- <div>
+      <h3>{{message}}</h3>
+    </div> -->
+    
+  
+  

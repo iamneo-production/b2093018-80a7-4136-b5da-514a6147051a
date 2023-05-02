@@ -1,0 +1,158 @@
+
+<h1 class="text-center">Life Insuarance Portal</h1>
+
+<div class="topnav">
+
+<a class="active" href="#home" routerLink="/view-policy">View Policy</a>
+
+<a href="#about" routerLink="/my-profile">My Profile</a>
+
+<a href="#contact" routerLink="/my-policy">My Policy</a>
+
+<a href="#history">Logout</a></div>
+<br>
+<h3 class="text-center">Available Policy</h3>
+
+<div class="table1" *ngFor="let u of policy1">
+    <p><label>Policy Id:</label> {{u.policyid}}</p>
+
+    <p><label>Policy Name:</label> {{u.policyname}}</p>
+    
+    <p><label>Applicable Age</label> {{u.applicableage}}</p>
+    
+    
+    <p><label>Number Of Year Plan:</label> {{u.yearsPlan}}</p>
+    
+    <p><label>Claim Amount:</label>Claim Amount:${{u.claimamt}}</p>
+    <div class="text-center">
+     <button type="button" class="btn btn-success btn btn-block" routerLink="/my-profile">Apply Policy</button>
+    </div>
+    
+    
+    </div>
+<div class="">&nbsp; &nbsp; About <a routerLink="/policy">Life Insuarance</a>
+
+    
+    <!-- <button type="button" routerLink="/policy">Back</button> -->
+
+<!-- trying  -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- <h2 class="text-center">Policy Data</h2> -->
+
+<br>
+
+<table class="table">
+    <thead class="table-dark">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Applicable</th>
+        <th>Claimant</th>
+        <th>Years</th>
+        <th>Rate</th>
+        <th>Details</th>
+        <th>Terms</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let u of policy1">
+        <td>{{u.policyid}}</td>
+        <td>{{u.policyname}}</td>
+        <td>{{u.applicableage}}</td>
+        <td>{{u.claimamt}}</td>
+        <td>{{u.yearsPlan}}</td>
+        <td>{{u.rateofinterest}}</td>
+        <td>{{u.policydetails}}</td>
+        <td>{{u.termsandcondition}}</td>
+       
+            
+        </tr>
+    </tbody>
+    
+</table>
+  </div>
+<br>
+<br>
+<br>  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- footer -->
+    <footer class="bg-dark text-center text-white">
+        <div class="">
+            <h5 class="text-uppercase">Life Insurance Portal</h5>
+    
+            <p>
+    
+            Buying life insurance protects your spouse and children from the potentially devastating financial losses that could result if something happened to you.
+            It provides financial security, helps to pay off debts, helps to pay living expenses, and helps to pay any medical or final expenses.
+    
+            </p>
+          </div>
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+          <!-- Section: Social media -->
+          <section class="mb-4">
+            <!-- Facebook -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              > <fa-icon [icon]="faFacebook"></fa-icon></a>
+      
+            <!-- Twitter -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              > <fa-icon [icon]="faTwitter"></fa-icon></a>
+      
+            <!-- Google -->
+            <!-- <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><i class="fab fa-google"></i
+            ></a> -->
+      
+            <!-- Instagram -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              > <fa-icon [icon]="faInstagram"></fa-icon></a>
+      
+            <!-- Linkedin -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><fa-icon [icon]="faLinkedin"></fa-icon></a>
+      
+            <!-- Github -->
+            <a mdbRipple class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+              ><fa-icon [icon]="faGithub"></fa-icon></a>
+          </section>
+          <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+          © 2020 Copyright:
+        Life Insuarance Portal
+        </div>
+        <!-- Copyright -->
+      </footer>
